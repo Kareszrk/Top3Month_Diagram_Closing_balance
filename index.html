@@ -60,28 +60,6 @@
             }
         }
     });
-
-    const egyenlegek = await fetch('https://tester.serversforgaming.com/test', {mode: "cors"}).then(res => res.json());
-    const ctx_ = document.getElementById('myChart2').getContext('2d');
-    const myChar_t = new Chart(ctx_, {
-        type: 'line',
-        data: {
-            labels: egyenlegek.months,
-            datasets: [{
-                label: 'Hogy változott egyenleged az elmúlt hónapokban',
-                data: egyenlegek.balances,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                ],
-                borderWidth: 2
-            }]
-        },
-    });
 })();
 </script>
 </html>
